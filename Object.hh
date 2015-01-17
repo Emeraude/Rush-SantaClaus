@@ -13,6 +13,6 @@ public:
   ~Object();
 
   virtual void isTaken();
-}
+};
 
 #endif
