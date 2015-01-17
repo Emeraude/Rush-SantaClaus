@@ -11,7 +11,7 @@ protected:
 
 public:
   Wrap(std::string const&);
-  ~Wrap();
+  virtual ~Wrap();
 
   virtual void isTaken();
   virtual void openMe();

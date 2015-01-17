@@ -13,7 +13,7 @@ protected:
 
 public:
   Object(std::string const &);
-  ~Object();
+  virtual ~Object();
 
   virtual void isTaken() = 0;
   std::string const & getName() const;

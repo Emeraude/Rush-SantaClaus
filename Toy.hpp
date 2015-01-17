@@ -7,7 +7,7 @@ class Toy : public Object {
 
 public:
   Toy(std::string const&);
-  ~Toy();
+  virtual ~Toy();
 };
 
 #endif
