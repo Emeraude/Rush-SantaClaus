@@ -1,7 +1,6 @@
 #include "Teddy.hpp"
 
-Teddy::Teddy() : Toy(TEDDY_NAME) {
-  
+Teddy::Teddy(std::string const& name) : Toy(name) {
 }
 
 Teddy::~Teddy() {

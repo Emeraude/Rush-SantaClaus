@@ -1,4 +1,3 @@
-
 #include "LittlePony.hpp"
 #include "Teddy.hpp"
 #include "Box.hpp"
@@ -18,4 +17,3 @@ int		main(void) {
 
   return 0;
 }
-
