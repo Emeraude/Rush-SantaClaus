@@ -5,3 +5,7 @@ Wrap::Wrap(std::string const & name) : Object(name) {
 }
 
 Wrap::~Wrap() {}
+
+void Wrap::isTaken() {
+  std::cout << "whistles while working" << std::endl;
+}
