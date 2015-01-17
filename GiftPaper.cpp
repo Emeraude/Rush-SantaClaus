@@ -1,11 +1,11 @@
 #include "GiftPaper.hpp"
 
 GiftPaper::GiftPaper(std::string const &name) : Wrap(name) {
-  _isOpen = false;
 }
 
 GiftPaper::~GiftPaper() {}
 
-bool GiftPaper::wrapMeThat(Object *) {
-  
+bool GiftPaper::wrapMeThat(Object * o) {
+  (void) o;
+  return true;
 }
