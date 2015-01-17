@@ -4,16 +4,18 @@
 #include "GiftPaper.hpp"
 
 
-int		main(void) {
-  LittlePony	Pony("pony");
-  Teddy		Teddy("teddy");
+int		main(void)
+{
+  LittlePony	pony("pony");
+  Teddy		teddy("teddy");
 
-  Box		Box("box");
-  GiftPaper	GiftPaper("giftpaper");
+  Box		box("box");
+  GiftPaper	giftPaper("giftpaper");
 
-  Wrap		Wrap("WRAP");
-  Toy		Toy("toy");
-
-
+  Object *toto = new Teddy;
+  Object *titi = new LittlePony;
+  
+  toto->isTaken();
+  titi->isTaken();
   return 0;
 }
