@@ -1,20 +1,19 @@
-
-#include "Object.hpp"
-#include "Toy.hpp"
-#include "Teddy.hpp"
 #include "LittlePony.hpp"
-#include <stdio.h>
+#include "Teddy.hpp"
+#include "Box.hpp"
+#include "GiftPaper.hpp"
 
-int	main(void)
-{
 
-  printf("\n_____________\n# Teddy class\n\n");
-  Teddy PedoBear;
-  PedoBear.isTaken();
+int		main(void) {
+  LittlePony	Pony("pony");
+  Teddy		Teddy("teddy");
 
-  printf("\n____________\n# LittlePony class\n\n");
-  LittlePony Brownie;
-  Brownie.isTaken();
+  Box		Box("box");
+  GiftPaper	GiftPaper("giftpaper");
+
+  Wrap		Wrap("WRAP");
+  Toy		Toy("toy");
+
 
   return 0;
 }
