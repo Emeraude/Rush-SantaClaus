@@ -13,9 +13,9 @@ public:
   Wrap(std::string const&);
   ~Wrap();
 
-  void isTaken();
-  void openMe();
-  bool isOpen() const;
+  virtual void isTaken();
+  virtual void openMe();
+  virtual bool isOpen() const;
   virtual bool wrapMeThat(Object*);
 };
 
