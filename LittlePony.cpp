@@ -1,6 +1,6 @@
 #include "LittlePony.hpp"
 
-LittlePony::LittlePony() : Toy("gay pony") {
+LittlePony::LittlePony() : Toy(LITTLE_PONY_NAME) {
   
 }
 
