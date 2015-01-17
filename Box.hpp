@@ -12,7 +12,7 @@ public:
   ~Box();
 
   void closeMe();
-  bool wrapMeThat(Object*);
+  virtual bool wrapMeThat(Object*);
 };
 
 #endif

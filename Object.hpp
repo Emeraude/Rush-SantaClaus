@@ -1,6 +1,7 @@
 #ifndef OBJECT_HH
 # define OBJECT_HH
 
+#include <iostream>
 #include <string>
 
 class Object {
@@ -16,6 +17,10 @@ public:
 
   virtual void isTaken() = 0;
   std::string const & getName() const;
+
+  virtual void openMe();
+  virtual bool isOpen();
+  virtual bool wrapMeThat(Object *);
 };
 
 Object *MyUnitTests(Object **);

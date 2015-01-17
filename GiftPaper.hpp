@@ -10,7 +10,7 @@ public:
   GiftPaper(std::string const& name = GIFTPAPER_NAME);
   ~GiftPaper();
 
-  bool wrapMeThat(Object *);
+  virtual bool wrapMeThat(Object *);
 };
 
 #endif

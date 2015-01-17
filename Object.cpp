@@ -12,3 +12,18 @@ std::string const & Object::getName() const
 {
   return _name;
 }
+
+void Object::openMe() {
+  std::cerr << "Function member in openMe does not exist" << std::endl;
+}
+
+bool Object::isOpen() {
+  std::cerr << "Function member in openMe does not exist" << std::endl;
+  return false;
+}
+
+bool Object::wrapMeThat(Object * o) {
+  std::cerr << "Function member in openMe does not exist" << std::endl;
+  (void) o;
+  return false;
+}
