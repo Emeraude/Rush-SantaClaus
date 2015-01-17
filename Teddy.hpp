@@ -9,7 +9,7 @@ public:
   Teddy();
   ~Teddy();
 
-  void isTaken();
+  virtual void isTaken();
 };
 
 #endif
