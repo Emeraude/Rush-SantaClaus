@@ -11,7 +11,7 @@ public:
   Wrap(std::string const&);
   ~Wrap();
 
-  virtual void wrapMeThat(Object *) = 0;
+  virtual bool wrapMeThat(Object *) = 0;
 };
 
 #endif
