@@ -14,7 +14,7 @@ public:
   Object(std::string const &);
   ~Object();
 
-  virtual void isTaken();
+  virtual void isTaken() = 0;
 };
 
 #endif
