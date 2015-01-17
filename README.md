@@ -12,10 +12,10 @@ I likes bonuses.
 
 ## Annoted subject
 
-yellow highlight is for important general things
-green highlight is for output management (strings to copy...)
-yellow inline notes are for storing informations that you are sure they are true
-light blue inline notes are for subject imprecisions that need explanations
+- **yellow highlight** is for important general things
+- **green highlight** is for output management (strings to copy...)
+- **yellow inline notes** are for storing informations that you are sure they are true
+- **light blue inline notes** are for subject imprecisions that need explanations
 
 ### Authors
 
