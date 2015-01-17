@@ -10,6 +10,14 @@ void Wrap::isTaken() {
   std::cout << "whistles while working" << std::endl;
 }
 
+bool Wrap::isOpen() const {
+  return _isOpen;
+}
+
+void Wrap::openMe() {
+  _isOpen = true;
+}
+
 bool Wrap::wrapMeThat(Object* o) {
   if (!o || _content) 
     return false;
