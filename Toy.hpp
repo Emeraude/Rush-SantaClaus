@@ -9,7 +9,7 @@ public:
   Toy(std::string const&);
   ~Toy();
 
-  virtual isTaken();
+  virtual void isTaken();
 };
 
 #endif

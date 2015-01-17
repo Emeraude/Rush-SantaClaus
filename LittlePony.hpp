@@ -10,7 +10,7 @@ public:
   LittlePony();
   ~LittlePony();
 
-  void isTaken();
-}
+  virtual void isTaken();
+};
 
 #endif
