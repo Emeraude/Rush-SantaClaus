@@ -1,7 +1,7 @@
 #ifndef TOY_HPP
 # define TOY_HPP
 
-#include "Object.hh"
+#include "Object.hpp"
 
 class Toy : public Object {
 
