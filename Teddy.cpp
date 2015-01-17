@@ -1,6 +1,6 @@
 #include "Teddy.hpp"
 
-Teddy::Teddy() : Toy("bisounours") {
+Teddy::Teddy() : Toy(TEDDY_NAME) {
   
 }
 
