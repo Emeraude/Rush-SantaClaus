@@ -5,8 +5,10 @@
 
 class Object {
 private:
-  bool _inUse;
   std::string const _name;
+
+protected:
+  bool _inUse;
 
 public:
   Object(std::string const &);
