@@ -10,6 +10,6 @@ public:
   ~LittlePony();
 
   void isTaken();
-}
+};
 
 #endif
