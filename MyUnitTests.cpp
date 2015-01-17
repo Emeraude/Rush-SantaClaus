@@ -6,7 +6,7 @@
 Object *MyUnitTests(Object **t)
 {
   if (!t)
-    std::cerr << "You did'nt provide a valid list of Object" << std::endl;
+    std::cerr << "You didn't provide a valid list of Objects" << std::endl;
   else if (!t[0])
     std::cerr << "No GiftPaper provided ! This is an ugly box ..." << std::endl;
   else if (!t[1])
