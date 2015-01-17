@@ -11,7 +11,7 @@ void Wrap::isTaken() {
 }
 
 bool Wrap::wrapMeThat(Object* o) {
-  if (!o) 
+  if (!o || _content) 
     return false;
   _content = o;
   return true;

@@ -20,7 +20,7 @@ bool Box::isOpen() const {
 }
 
 bool Box::wrapMeThat(Object* o) {
-  if (!o || !isOpen())
+  if (!o || !isOpen() || _content)
     return false;
   _content = o;
   return true;
