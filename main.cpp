@@ -17,5 +17,9 @@ int		main(void)
   
   toto->isTaken();
   titi->isTaken();
+  box.openMe();
+  box.wrapMeThat(toto);
+  box.closeMe();
+  box.wrapMeThat(titi);
   return 0;
 }

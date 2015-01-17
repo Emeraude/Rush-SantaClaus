@@ -3,7 +3,8 @@
 
 # define BOX_NAME "Box"
 
-#include "Wrap.hpp"
+# include "Wrap.hpp"
+# include "Toy.hpp"
 
 class Box : public Wrap {
 private:
@@ -16,7 +17,7 @@ public:
   void openMe();
 
   bool isOpen() const;
-  bool wrapMeThat(Object *);
+  bool wrapMeThat(Object*);
 };
 
 #endif

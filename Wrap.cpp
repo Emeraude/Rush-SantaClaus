@@ -1,11 +1,18 @@
 #include "Wrap.hpp"
 
 Wrap::Wrap(std::string const & name) : Object(name) {
-  _contains = NULL;
+  _content = NULL;
 }
 
 Wrap::~Wrap() {}
 
 void Wrap::isTaken() {
   std::cout << "whistles while working" << std::endl;
+}
+
+bool Wrap::wrapMeThat(Object* o) {
+  if (!o) 
+    return false;
+  _content = o;
+  return true;
 }

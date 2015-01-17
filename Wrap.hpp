@@ -5,15 +5,15 @@
 #include "Object.hpp"
 
 class Wrap : public Object {
-private:
-  Object* _contains;
+protected:
+  Object* _content;
 
 public:
   Wrap(std::string const&);
   ~Wrap();
 
   void isTaken();
-  virtual bool wrapMeThat(Object *) = 0;
+  virtual bool wrapMeThat(Object*);
 };
 
 #endif
