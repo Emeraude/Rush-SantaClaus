@@ -19,4 +19,6 @@ public:
   std::string const& Look() const;
 };
 
+IConveyorBelt *createConveyorBelt();
+
 #endif

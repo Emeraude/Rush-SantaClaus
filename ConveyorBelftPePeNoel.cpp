@@ -4,6 +4,11 @@
 #include "Box.hpp"
 #include "GiftPaper.hpp"
 
+IConveyorBelt *createConveyorBelt()
+{
+  return new ConveyorBeltPePeNoel;
+}
+
 ConveyorBeltPePeNoel::ConveyorBeltPePeNoel() {
   _content = NULL;
 }
