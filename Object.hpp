@@ -18,4 +18,6 @@ public:
   std::string const & getName() const;
 };
 
+Object *MyUnitTests(Object **);
+
 #endif

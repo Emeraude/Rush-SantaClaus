@@ -3,7 +3,6 @@
 #include "Box.hpp"
 #include "GiftPaper.hpp"
 
-
 int		main(void)
 {
   LittlePony	pony("pony");
