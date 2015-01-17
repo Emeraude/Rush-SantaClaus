@@ -19,7 +19,7 @@ ConveyorBeltPePeNoel::~ConveyorBeltPePeNoel() {
 
 Object *ConveyorBeltPePeNoel::Take() {
   if (!_content)
-    std::cerr << "Lazy little elf T_PAAMAYIM_NEKUDOTAYIM Conveyor Belt is empty !" << std::endl;
+    std::cerr << ICB_ERR_EMPTY << std::endl;
   Object *tmp = _content;
   _content = NULL;
   return tmp;
@@ -27,7 +27,7 @@ Object *ConveyorBeltPePeNoel::Take() {
 
 bool ConveyorBeltPePeNoel::Put(Object *tmp) {
   if (_content) {
-    std::cerr << "Conveyor Belt queue overflow ! It's not empty !" << std::endl;
+    std::cerr << ICB_ERR_NEMPTY << std::endl;
     return false;
   }
   _content = tmp;
@@ -36,7 +36,7 @@ bool ConveyorBeltPePeNoel::Put(Object *tmp) {
 
 bool ConveyorBeltPePeNoel::IN() {
   if (_content) {
-    std::cerr << "Conveyor Belt queue overflow ! It's not empty !" << std::endl;
+    std::cerr << ICB_ERR_NEMPTY << std::endl;
     return false;
   }
   if (random() % 2)
@@ -48,7 +48,7 @@ bool ConveyorBeltPePeNoel::IN() {
 
 bool ConveyorBeltPePeNoel::OUT() {
   if (!_content) {
-    std::cerr << "Lazy little elf T_PAAMAYIM_NEKUDOTAYIM Conveyor Belt is empty !" << std::endl;
+    std::cerr << ICB_ERR_EMPTY << std::endl;
     return false;
   }
   delete _content;
@@ -58,7 +58,7 @@ bool ConveyorBeltPePeNoel::OUT() {
 
 std::string const& ConveyorBeltPePeNoel::Look() const {
   if (!_content) {
-    std::cerr << "/me take a sleep" << std::endl;
+    std::cerr << ICB_ERR_EMPTY << std::endl;
     return NULL;
   }
   return _content->getName();
