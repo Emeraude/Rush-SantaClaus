@@ -11,8 +11,7 @@ void Box::closeMe() {
 }
 
 bool Box::wrapMeThat(Object* o) {
-  if (!o || !isOpen() || _content)
+  if (!isOpen())
     return false;
-  _content = o;
-  return true;
+  return Wrap::wrapMeThat(o);
 }

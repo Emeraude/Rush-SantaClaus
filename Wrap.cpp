@@ -21,6 +21,7 @@ void Wrap::openMe() {
 bool Wrap::wrapMeThat(Object* o) {
   if (!o || _content) 
     return false;
+  std::cout << "tuuuut tuuut tuut" << std::endl;
   _content = o;
   return true;
 }
