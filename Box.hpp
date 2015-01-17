@@ -16,6 +16,7 @@ public:
   void openMe();
 
   bool isOpen() const;
+  bool wrapMeThat(Object *);
 };
 
 #endif

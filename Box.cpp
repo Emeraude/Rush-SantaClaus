@@ -18,3 +18,8 @@ void Box::openMe() {
 bool Box::isOpen() const {
   return _isOpen;
 }
+
+bool Box::wrapMeThat(Object * o) {
+  (void) o;
+  return true;
+}
