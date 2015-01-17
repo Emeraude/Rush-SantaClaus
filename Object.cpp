@@ -7,3 +7,8 @@ Object::Object(std::string const& name) :
 }
 
 Object::~Object() {}
+
+std::string const & Object::getName() const
+{
+  return _name;
+}

@@ -15,6 +15,7 @@ public:
   ~Object();
 
   virtual void isTaken() = 0;
+  std::string const & getName() const;
 };
 
 #endif
