@@ -9,7 +9,7 @@ public:
   virtual Object *Take() = 0;
   virtual bool Put(Object*) = 0;
   virtual bool IN() = 0;
-  virtual void OUT() = 0;
+  virtual bool OUT() = 0;
   virtual std::string* const & Look() = 0;
 };
 
