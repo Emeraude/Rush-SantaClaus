@@ -35,6 +35,6 @@ int		main(void)
 
   //unit->setContent(tab[1]);
   //unit->getContent()->setContent(tab[0]);
-  std::cout << unit->XML() << std::endl;
+  //std::cout << unit->XML() << std::endl;
   return 0;
 }

@@ -8,8 +8,6 @@ class GiftPaper : public Wrap {
 public:
   GiftPaper(std::string const& name = PAPER_NAME);
   ~GiftPaper();
-
-  virtual bool wrapMeThat(Object *);
 };
 
 #endif
