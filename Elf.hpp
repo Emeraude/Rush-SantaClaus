@@ -8,7 +8,7 @@
 # include "GiftPaper.hpp"
 # include "Box.hpp"
 # include "ConveyorBeltPePeNoel.hpp"
-# include "Table.hpp"
+# include "TablePePeNoel.hpp"
 
 class Efl
 {
