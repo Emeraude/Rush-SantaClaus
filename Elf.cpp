@@ -50,14 +50,14 @@ bool Elf::TableHasPlace()
   int i;
   std::string *s = _table->Look();
   for (i=0; !s[i].empty(); i++);
-  return i - 10;
+  return i != 10;
 }
 
 void Elf::EnumTable()
 {
   std::string *s = _table->Look();
   std::cout << _name << " go to check the table..." << std::endl;
-  for (int i = 0; s[i]; i++)
+  for (int i = 0; !s[i].empty(); i++)
     std::cout << "There is a " << *s << " on the table" << std::endl;
 }
 

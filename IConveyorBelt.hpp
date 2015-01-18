@@ -5,7 +5,7 @@
 
 class IConveyorBelt
 {
-protected:
+public:
   virtual ~IConveyorBelt() {}
   virtual Object *Take() = 0;
   virtual bool Put(Object*) = 0;

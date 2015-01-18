@@ -6,7 +6,7 @@
 
 class IElf
 {
-protected:
+public:
   virtual ~IElf() {}
   virtual void startWork() = 0;
   virtual bool sendGift() = 0;

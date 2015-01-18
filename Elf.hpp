@@ -16,14 +16,13 @@ public:
   Elf();
   ~Elf();
 
-  virtual void startWork();
+  void startWork();
 
 protected:
   bool SendGift();
   bool CheckIfBoxOnTable();
   bool CheckIfPaperOnTable();
   bool CheckIfToyOnTable();
-  bool TableHasPlace();
   bool CheckIfGiftOnTable();
   bool TableHasPlace();
   void EnumTable();
