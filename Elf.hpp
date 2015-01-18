@@ -38,6 +38,7 @@ private:
   std::string _name;
   ITable *_table;
   IConveyorBelt *_cb;
+  Object *_gift;
 
 };
 

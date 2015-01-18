@@ -66,7 +66,7 @@ Object *Elf::takeFirstToy()
   for (int i; !s.empty(); i++)
     if (s[i] == TEDDY_NAME || s[i] == PONY_NAME)
       return _table->Take(i);
-  return NULL
+  return NULL;
 }
 
 Object *Elf::takeFirstBox()
@@ -75,16 +75,16 @@ Object *Elf::takeFirstBox()
   for (int i; !s.empty(); i++)
     if (s[i] == BOX_NAME)
       return _table->Take(i);
-  return NULL
+  return NULL;
 }
 
 Object *Elf::takeFirstPaper()
 {
   std::string *s = _table->Look(); // list of objects
-  for (int i; !s.empty(); i++)
+  for (int i; !s.Empty(); i++)
     if (s[i] == PAPER_NAME)
       return _table->Take(i);
-  return NULL
+  return NULL;
 }
 
 void Elf::makeAGift()
@@ -101,8 +101,8 @@ void Elf::makeAGift()
 
 bool Elf::takeAWarp()
 {
-  _cp->IN();
-  if (!_table->Put(_cp->Take()))
+  _cb->IN();
+  if (!_table->Put(_cb->Take()))
     return false;
   return true;
 }
@@ -126,4 +126,5 @@ bool Elf::StartWork()
             return false;
         }
     }
+  return true;
 }
