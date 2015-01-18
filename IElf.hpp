@@ -7,7 +7,7 @@
 class IEfl
 {
 protected:
-  virtual ~IEfl();
+  virtual ~IEfl() {}
   virtual void startWork() = 0;
   virtual bool sendGift() = 0;
 };
