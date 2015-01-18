@@ -13,8 +13,11 @@ ConveyorBeltPePeNoel::~ConveyorBeltPePeNoel() {
 }
 
 Object *ConveyorBeltPePeNoel::Take() {
-  if (!_content)
+  if (!_content) {
     std::cerr << "Lazy little elf T_PAAMAYIM_NEKUDOTAYIM Conveyor Belt is empty !" << std::endl;
+    return NULL;
+  }
+  _content->isTaken();
   Object *tmp = _content;
   _content = NULL;
   return tmp;
