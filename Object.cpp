@@ -27,3 +27,9 @@ bool Object::wrapMeThat(Object * o) {
   (void) o;
   return false;
 }
+
+std::ostream& operator<<(std::ostream &s, Object const &o)
+{
+  s << o.getName();
+  return s;
+}
