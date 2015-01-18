@@ -19,7 +19,7 @@ public:
   bool StartWork();
 
 protected:
-  bool SendGift();
+  //bool SendGift();
   bool CheckIfBoxAvailable() const;
   bool CheckIfPaperAvailable() const;
   bool CheckIfToyAvailable() const;

@@ -2,6 +2,7 @@
 #include "Teddy.hpp"
 #include "Box.hpp"
 #include "GiftPaper.hpp"
+#include "Elf.hpp"
 
 Object* MyUnitTests(Object**);
 Object** MyUnitTests();
@@ -38,6 +39,10 @@ int		main(void)
   std::cout << Tibers->XML() << std::endl;
   std::cout << BBox->XML() << std::endl << std::endl;
   std::cout << unit->XML() << std::endl;
+
+  std::cout << "-------- TEST ELF --------" << std::endl;
+  Elf elf;
+  elf.StartWork();
 
   delete Tibers;
   delete BBox;

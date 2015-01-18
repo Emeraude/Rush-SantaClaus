@@ -8,8 +8,8 @@ class IElf
 {
 protected:
   virtual ~IElf() {}
-  virtual void startWork() = 0;
-  virtual bool sendGift() = 0;
+  virtual bool StartWork() = 0;
+  //virtual bool SendGift() = 0;
   virtual bool CheckIfBoxAvailable() const = 0;
   virtual bool CheckIfPaperAvailable() const = 0;
   virtual bool CheckIfToyAvailable() const = 0;
