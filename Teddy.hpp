@@ -1,7 +1,6 @@
 #ifndef TEDDY_HPP
 # define TEDDY_HPP
 
-# define TEDDY_NAME "Teddy"
 # include <iostream>
 # include "Toy.hpp"
 

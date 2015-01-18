@@ -1,8 +1,7 @@
 #ifndef BOX_HPP
 # define BOX_HPP
 
-# define BOX_NAME "Box"
-
+# include "Object.hpp"
 # include "Wrap.hpp"
 # include "Toy.hpp"
 
@@ -14,7 +13,7 @@ public:
   void closeMe();
   virtual bool wrapMeThat(Object*);
 
-  virtual bool isOpen();
+  virtual bool isOpen() const;
 };
 
 #endif

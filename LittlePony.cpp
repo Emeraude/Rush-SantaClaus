@@ -1,6 +1,6 @@
 #include "LittlePony.hpp"
 
-LittlePony::LittlePony(std::string const& name) : Toy(name) {
+LittlePony::LittlePony(std::string const& name) : Toy(name, PONY_NAME) {
   
 }
 

@@ -1,6 +1,6 @@
 #include "Wrap.hpp"
 
-Wrap::Wrap(std::string const & name) : Object(name) {
+Wrap::Wrap(std::string const & name, std::string const & type) : Object(name, type) {
   _content = NULL;
 }
 
@@ -26,4 +26,14 @@ bool Wrap::wrapMeThat(Object* o) {
   std::cout << "tuuuut tuuut tuut" << std::endl;
   _content = o;
   return true;
+}
+
+Object *Wrap::getContent() const
+{
+  return _content;
+}
+  
+void Wrap::setContent(Object* o)
+{
+  _content = o;
 }

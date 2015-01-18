@@ -1,6 +1,6 @@
 #include "Box.hpp"
 
-Box::Box(std::string const &name) : Wrap(name) {
+Box::Box(std::string const &name) : Wrap(name, BOX_NAME) {
   _isOpen = false;
 }
 
@@ -10,7 +10,7 @@ void Box::closeMe() {
   _isOpen = false;
 }
 
-bool Box::isOpen() {
+bool Box::isOpen() const {
   return _isOpen;
 }
 

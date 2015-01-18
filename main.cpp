@@ -8,17 +8,17 @@ Object** MyUnitTests();
 
 int		main(void)
 {
-  LittlePony	pony("pony");
-  Teddy		teddy("teddy");
+  LittlePony	pony;
+  Teddy		teddy;
 
-  Box		box("box");
-  GiftPaper	giftPaper("giftpaper");
+  Box		box;
+  GiftPaper	giftPaper;
 
   Object *toto = new Teddy;
   // Object *titi = new LittlePony;
 
   Object *tab[3];
-  // box.isOpen();
+  box.isOpen();
   
   tab[0] = toto;
   tab[1] = &box;
@@ -28,5 +28,13 @@ int		main(void)
   std::cout << unit->getName() << std::endl;
   std::cout << test[0]->getName() << std::endl;
   std::cout << test[1]->getName() << std::endl;
+
+//  std::cout << unit->XML() << std::endl;
+//  std::cout << test[0]->XML() << std::endl;
+//  std::cout << test[1]->XML() << std::endl;
+
+  //unit->setContent(tab[1]);
+  //unit->getContent()->setContent(tab[0]);
+  std::cout << unit->XML() << std::endl;
   return 0;
 }
