@@ -30,7 +30,7 @@ protected:
   Object *TakeFirstBox();
   Object *TakeFirstPaper();
   void MakeAGift();
-  bool TakeAWarp();
+  bool TakeAWrap();
 
 private:
   std::string _gender;

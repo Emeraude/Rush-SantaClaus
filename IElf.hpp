@@ -20,7 +20,7 @@ protected:
   virtual Object *TakeFirstBox() = 0;
   virtual Object *TakeFirstPaper() = 0;
   virtual void MakeAGift() = 0;
-  virtual bool TakeAWarp() = 0;
+  virtual bool TakeAWrap() = 0;
 };
 
 #endif

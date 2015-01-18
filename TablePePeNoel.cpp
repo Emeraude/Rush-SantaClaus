@@ -52,5 +52,6 @@ std::string *TablePePeNoel::Look() {
 ITable *createTable()
 {
   ITable *table = new TablePePeNoel;
+  // TODO : Init with 2 2 2
   return table;
 }
