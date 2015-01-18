@@ -98,13 +98,13 @@ void Elf::MakeAGift()
   Object *box = TakeFirstBox();
   Object *paper = TakeFirstPaper();
   box->openMe();
-  box->warpMeThat(toy);
+  box->wrapMeThat(toy);
   box->closeMe();
-  paper->warpMeThat(box);
+  paper->wrapMeThat(box);
   _gift = paper;
 }
 
-bool Elf::TakeAWarp()
+bool Elf::TakeAWrap()
 {
   _cb->IN();
   if (!_table->Put(_cb->Take()))
@@ -114,7 +114,7 @@ bool Elf::TakeAWarp()
 
 bool Elf::StartWork()
 {
-  // if a gift is dispo or if a toy AND place for a warp
+  // if a gift is dispo or if a toy AND place for a wrap
   while (CheckIfGiftAvailable() || (CheckIfToyAvailable() && TableHasPlace()))
     {
       EnumTable();
@@ -127,9 +127,10 @@ bool Elf::StartWork()
         }
       else
         {
-          if (!TakeAWarp())
+          if (!TakeAWrap())
             return false;
         }
     }
+  std::cout << "pepe ya un schmolle dans le bignou" << std::endl;
   return true;
 }
