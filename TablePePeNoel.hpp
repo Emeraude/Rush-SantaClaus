@@ -4,7 +4,7 @@
 # include "ITable.hpp"
 
 class TablePePeNoel : public ITable {
-private:
+protected:
   Object* _content[9];
   std::string *_strings;
 
