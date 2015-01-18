@@ -18,12 +18,12 @@ void Object::openMe() {
 }
 
 bool Object::isOpen() {
-  std::cerr << "Function member in openMe does not exist" << std::endl;
+  std::cerr << "in :"<< _name<<  " :Function member in isOpen does not exist" << std::endl;
   return false;
 }
 
 bool Object::wrapMeThat(Object * o) {
-  std::cerr << "Function member in openMe does not exist" << std::endl;
+  std::cerr << "Function member in wrapMeThat does not exist" << std::endl;
   (void) o;
   return false;
 }

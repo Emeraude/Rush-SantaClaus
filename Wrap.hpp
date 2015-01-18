@@ -15,7 +15,7 @@ public:
 
   virtual void isTaken();
   virtual void openMe();
-  virtual bool isOpen() const;
+  bool isOpen() const;
   virtual bool wrapMeThat(Object*);
 };
 
