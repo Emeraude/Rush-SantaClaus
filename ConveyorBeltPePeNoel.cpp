@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 #include "ConveyorBeltPePeNoel.hpp"
 #include "Box.hpp"
 #include "GiftPaper.hpp"
@@ -38,11 +37,13 @@ bool ConveyorBeltPePeNoel::Put(Object *tmp) {
 }
 
 bool ConveyorBeltPePeNoel::IN() {
+  static int i = 0;
+
   if (_content) {
     std::cerr << ICB_ERR_NEMPTY << std::endl;
     return false;
   }
-  if (random() % 2)
+  if (++i % 2)
     _content = new Box;
   else
     _content = new GiftPaper;

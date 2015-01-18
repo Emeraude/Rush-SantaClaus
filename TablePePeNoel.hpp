@@ -12,7 +12,7 @@ public:
   ~TablePePeNoel();
   Object *Take();
   bool Put(Object*);
-  std::string[] Look() const;
+  std::string Look() const;
 };
 
 ITable *createTable();
