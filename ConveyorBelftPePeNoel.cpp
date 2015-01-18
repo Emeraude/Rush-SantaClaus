@@ -18,8 +18,11 @@ ConveyorBeltPePeNoel::~ConveyorBeltPePeNoel() {
 }
 
 Object *ConveyorBeltPePeNoel::Take() {
-  if (!_content)
+  if (!_content) {
     std::cerr << ICB_ERR_EMPTY << std::endl;
+    return NULL;
+  }
+  _content->isTaken();
   Object *tmp = _content;
   _content = NULL;
   return tmp;
