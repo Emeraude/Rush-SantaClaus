@@ -6,10 +6,9 @@
 
 class IEfl
 {
-public:
-  virtual void startWork() = 0;
-
 protected:
+  virtual ~IEfl() {}
+  virtual void startWork() = 0;
   virtual bool sendGift() = 0;
 };
 

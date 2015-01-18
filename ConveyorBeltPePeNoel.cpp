@@ -3,11 +3,6 @@
 #include "Box.hpp"
 #include "GiftPaper.hpp"
 
-IConveyorBelt *createConveyorBelt()
-{
-  return new ConveyorBeltPePeNoel;
-}
-
 ConveyorBeltPePeNoel::ConveyorBeltPePeNoel() {
   _content = NULL;
 }
@@ -66,4 +61,9 @@ std::string const& ConveyorBeltPePeNoel::Look() const {
     return NULL;
   }
   return _content->getName();
+}
+
+IConveyorBelt *createConveyorBelt()
+{
+  return new ConveyorBeltPePeNoel;
 }

@@ -37,7 +37,7 @@ bool TablePePeNoel::Put(Object *) {
   return false;
 }
 
-std::string[] TablePePeNoel::Look() const {
+std::string *TablePePeNoel::Look() const {
   std::string strings[11];
 
   int i = -1;
