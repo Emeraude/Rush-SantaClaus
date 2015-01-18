@@ -37,16 +37,16 @@ bool TablePePeNoel::Put(Object *) {
   return false;
 }
 
-std::string *TablePePeNoel::Look() const {
-  std::string strings[11];
-
+std::string *TablePePeNoel::Look() {
+  for (int i = 0; i < 10; i++)
+    _strings[i] = "";
   int i = -1;
   int j = -1;
   while (++i < 10)
     if (_content[i])
-      strings[++j] = _content[i]->getName();
-  strings[++j] = "";
-  return strings;
+      _strings[++j] = _content[i]->getName();
+  _strings[++j] = "";
+  return _strings;
 }
 
 ITable *createTable()

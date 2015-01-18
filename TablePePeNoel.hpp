@@ -6,6 +6,7 @@
 class TablePePeNoel : public ITable {
 private:
   Object* _content[10];
+  std::string _strings[11];
 
 public:
   TablePePeNoel();
@@ -13,7 +14,7 @@ public:
   Object *Take();
   Object *Take(int i);
   bool Put(Object*);
-  std::string *Look() const;
+  std::string *Look();
 };
 
 ITable *createTable();
