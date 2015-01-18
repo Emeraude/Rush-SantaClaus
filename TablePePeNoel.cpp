@@ -41,3 +41,8 @@ std::string[] TablePePeNoel::Look() const {
   strings[++j] = "";
   return strings;
 }
+
+ITable *createTable()
+{
+  ITable *table = new Table;
+}

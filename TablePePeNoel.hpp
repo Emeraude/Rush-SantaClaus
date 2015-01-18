@@ -15,4 +15,6 @@ public:
   std::string[] Look() const;
 };
 
+ITable *createTable();
+
 #endif
