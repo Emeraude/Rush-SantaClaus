@@ -10,7 +10,7 @@
 # include "ConveyorBeltPePeNoel.hpp"
 # include "TablePePeNoel.hpp"
 
-class Efl
+class Efl : public IElf
 {
 public:
   Elf();
