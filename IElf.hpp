@@ -2,14 +2,13 @@
 # define IELF_HPP
 
 # include "ConveyorBeltPePeNoel.hpp"
-# include "Table.hpp"
+# include "TablePePeNoel.hpp"
 
 class IEfl
 {
-public:
-  virtual void startWork() = 0;
-
 protected:
+  virtual ~IEfl();
+  virtual void startWork() = 0;
   virtual bool sendGift() = 0;
 };
 
