@@ -63,7 +63,7 @@ void Elf::EnumTable() const
   std::string *s = _table->Look();
   std::cout << _name << " go to check the table..." << std::endl;
   for (int i = 0; !s[i].empty(); i++)
-    std::cout << "There is a " << *s << " on the table" << std::endl;
+    std::cout << "There is a " << s[i] << " on the table" << std::endl;
 }
 
 Object *Elf::TakeFirstToy()
