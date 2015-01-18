@@ -29,3 +29,12 @@ Object *MyUnitTests(Object **t)
     }
   return NULL;
 }
+
+Object **MyUnitTests()
+{
+  Object** tab = new Object*[2];
+
+  tab[0] = new LittlePony("gay pony");
+  tab[1] = new Teddy("bisounours");
+  return tab;
+}
