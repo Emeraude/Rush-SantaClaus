@@ -60,7 +60,54 @@ void Elf::EnumTable()
     std::cout << "There is a " << *s << " on the table" << std::endl;
 }
 
-Elf::StartWork()
+Object *Elf::takeFirstToy()
+{
+  std::string *s = _table->Look(); // list of objects
+  for (int i; !s.empty(); i++)
+    if (s[i] == TEDDY_NAME || s[i] == PONY_NAME)
+      return _table->Take(i);
+  return NULL
+}
+
+Object *Elf::takeFirstBox()
+{
+  std::string *s = _table->Look(); // list of objects
+  for (int i; !s.empty(); i++)
+    if (s[i] == BOX_NAME)
+      return _table->Take(i);
+  return NULL
+}
+
+Object *Elf::takeFirstPaper()
+{
+  std::string *s = _table->Look(); // list of objects
+  for (int i; !s.empty(); i++)
+    if (s[i] == PAPER_NAME)
+      return _table->Take(i);
+  return NULL
+}
+
+void Elf::makeAGift()
+{
+  Object *toy = takeFirstToy();
+  Object *box = takeFirstBox();
+  Object *paper = takeFirstPaper();
+  box->openMe();
+  box->warpMeThat(toy);
+  box->closeMe();
+  paper->warpMeThat(box);
+  _gift = paper;
+}
+
+bool Elf::takeAWarp()
+{
+  _cp->IN();
+  if (!_table->Put(_cp->Take()))
+    return false;
+  return true;
+}
+
+bool Elf::StartWork()
 {
   // if a gift is dispo or if a toy AND place for a warp
   while (CheckIfGiftOnTable() || (CheckIfToysOnTable() && TableHasPlace()))
@@ -75,7 +122,8 @@ Elf::StartWork()
         }
       else
         {
-          takeAWarp();
+          if (!takeAWarp())
+            return false;
         }
     }
 }

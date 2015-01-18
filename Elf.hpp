@@ -20,6 +20,18 @@ public:
 
 protected:
   bool sendGift();
+  bool CheckIfBoxOnTable();
+  bool CheckIfPaperOnTable();
+  bool CheckIfToyOnTable();
+  bool TableHasPlace();
+  bool CheckIfGiftOnTable();
+  bool TableHasPlace();
+  void EnumTable();
+  Object *takeFirstToy();
+  Object *takeFirstBox();
+  Object *takeFirstPaper();
+  void makeAGift();
+  bool takeAWarp();
 
 private:
   std::string _gender;
