@@ -16,7 +16,7 @@ public:
   Elf();
   ~Elf();
 
-  void startWork();
+  void StartWork();
 
 protected:
   bool SendGift();
