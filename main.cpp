@@ -12,13 +12,15 @@ int		main(void)
   GiftPaper	giftPaper("giftpaper");
 
   Object *toto = new Teddy;
-  Object *titi = new LittlePony;
+  // Object *titi = new LittlePony;
+
+  Object *tab[3];
+  // box.isOpen();
   
-  toto->isTaken();
-  titi->isTaken();
-  box.openMe();
-  box.wrapMeThat(toto);
-  box.closeMe();
-  box.wrapMeThat(titi);
+  tab[0] = toto;
+  tab[1] = &box;
+  tab[2] = &giftPaper;
+  Object *unit = MyUnitTests(tab);
+  std::cout << unit->getName() << std::endl;
   return 0;
 }
