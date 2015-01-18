@@ -20,12 +20,12 @@ public:
 
 protected:
   bool SendGift();
-  bool CheckIfBoxAvailable();
-  bool CheckIfPaperAvailable();
-  bool CheckIfToyAvailable();
-  bool CheckIfGiftAvailable();
-  bool TableHasPlace();
-  void EnumTable();
+  bool CheckIfBoxAvailable() const;
+  bool CheckIfPaperAvailable() const;
+  bool CheckIfToyAvailable() const;
+  bool CheckIfGiftAvailable() const;
+  bool TableHasPlace() const;
+  void EnumTable() const;
   Object *TakeFirstToy();
   Object *TakeFirstBox();
   Object *TakeFirstPaper();
