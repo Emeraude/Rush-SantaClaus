@@ -10,7 +10,7 @@
 # include "ConveyorBeltPePeNoel.hpp"
 # include "TablePePeNoel.hpp"
 
-class Efl : public IElf
+class Elf : public IElf
 {
 public:
   Elf();
@@ -19,7 +19,7 @@ public:
   virtual void startWork();
 
 protected:
-  bool sendGift();
+  bool SendGift();
   bool CheckIfBoxOnTable();
   bool CheckIfPaperOnTable();
   bool CheckIfToyOnTable();
@@ -27,17 +27,17 @@ protected:
   bool CheckIfGiftOnTable();
   bool TableHasPlace();
   void EnumTable();
-  Object *takeFirstToy();
-  Object *takeFirstBox();
-  Object *takeFirstPaper();
-  void makeAGift();
-  bool takeAWarp();
+  Object *TakeFirstToy();
+  Object *TakeFirstBox();
+  Object *TakeFirstPaper();
+  void MakeAGift();
+  bool TakeAWarp();
 
 private:
   std::string _gender;
   std::string _name;
-  ITable *_table;
-  IConveyorBelt *_cb;
+  TablePePeNoel *_table;
+  ConveyorBeltPePeNoel *_cb;
   Object *_gift;
 
 };

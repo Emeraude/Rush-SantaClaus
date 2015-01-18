@@ -16,7 +16,7 @@ Elf::~Elf()
 bool Elf::CheckIfBoxOnTable()
 {
   std::string *s = _table->Look(); // list of objects
-  for (int i; !s.empty(); i++)
+  for (int i=0; !s[i].empty(); i++)
     if (s[i] == BOX_NAME)
       return true;
   return false;
@@ -25,7 +25,7 @@ bool Elf::CheckIfBoxOnTable()
 bool Elf::CheckIfPaperOnTable()
 {
   std::string *s = _table->Look(); // list of objects
-  for (int i; !s.empty(); i++)
+  for (int i=0; !s[i].empty(); i++)
     if (s[i] == PAPER_NAME)
       return true;
   return false;
@@ -34,7 +34,7 @@ bool Elf::CheckIfPaperOnTable()
 bool Elf::CheckIfToyOnTable()
 {
   std::string *s = _table->Look(); // list of objects
-  for (int i; !s.empty(); i++)
+  for (int i=0; !s[i].empty(); i++)
     if (s[i] == TEDDY_NAME || s[i] == PONY_NAME)
       return true;
   return false;
@@ -47,8 +47,9 @@ bool Elf::CheckIfGiftOnTable()
 
 bool Elf::TableHasPlace()
 {
+  int i;
   std::string *s = _table->Look();
-  for (int i; !s.empty(); i++);
+  for (i=0; !s[i].empty(); i++);
   return i - 10;
 }
 
@@ -60,38 +61,38 @@ void Elf::EnumTable()
     std::cout << "There is a " << *s << " on the table" << std::endl;
 }
 
-Object *Elf::takeFirstToy()
+Object *Elf::TakeFirstToy()
 {
   std::string *s = _table->Look(); // list of objects
-  for (int i; !s.empty(); i++)
+  for (int i; !s[i].empty(); i++)
     if (s[i] == TEDDY_NAME || s[i] == PONY_NAME)
       return _table->Take(i);
   return NULL;
 }
 
-Object *Elf::takeFirstBox()
+Object *Elf::TakeFirstBox()
 {
   std::string *s = _table->Look(); // list of objects
-  for (int i; !s.empty(); i++)
+  for (int i; !s[i].empty(); i++)
     if (s[i] == BOX_NAME)
       return _table->Take(i);
   return NULL;
 }
 
-Object *Elf::takeFirstPaper()
+Object *Elf::TakeFirstPaper()
 {
   std::string *s = _table->Look(); // list of objects
-  for (int i; !s.Empty(); i++)
+  for (int i; !s[i].empty(); i++)
     if (s[i] == PAPER_NAME)
       return _table->Take(i);
   return NULL;
 }
 
-void Elf::makeAGift()
+void Elf::MakeAGift()
 {
-  Object *toy = takeFirstToy();
-  Object *box = takeFirstBox();
-  Object *paper = takeFirstPaper();
+  Object *toy = TakeFirstToy();
+  Object *box = TakeFirstBox();
+  Object *paper = TakeFirstPaper();
   box->openMe();
   box->warpMeThat(toy);
   box->closeMe();
@@ -99,7 +100,7 @@ void Elf::makeAGift()
   _gift = paper;
 }
 
-bool Elf::takeAWarp()
+bool Elf::TakeAWarp()
 {
   _cb->IN();
   if (!_table->Put(_cb->Take()))
@@ -115,14 +116,14 @@ bool Elf::StartWork()
       EnumTable();
       if (CheckIfGiftOnTable())
         {
-          makeAGift(); // set the _gift
+          MakeAGift(); // set the _gift
           _cb->Put(_gift);
           _cb->OUT();
           _gift = NULL;
         }
       else
         {
-          if (!takeAWarp())
+          if (!TakeAWarp())
             return false;
         }
     }
