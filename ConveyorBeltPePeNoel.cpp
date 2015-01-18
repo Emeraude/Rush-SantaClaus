@@ -5,6 +5,7 @@
 
 ConveyorBeltPePeNoel::ConveyorBeltPePeNoel() {
   _content = NULL;
+  _name = "";
 }
 
 ConveyorBeltPePeNoel::~ConveyorBeltPePeNoel() {
@@ -19,6 +20,7 @@ Object *ConveyorBeltPePeNoel::Take() {
   _content->isTaken();
   Object *tmp = _content;
   _content = NULL;
+  _name = "";
   return tmp;
 }
 
@@ -28,6 +30,7 @@ bool ConveyorBeltPePeNoel::Put(Object *tmp) {
     return false;
   }
   _content = tmp;
+  _name = tmp->getName();
   return true;
 }
 
@@ -42,6 +45,7 @@ bool ConveyorBeltPePeNoel::IN() {
     _content = new Box;
   else
     _content = new GiftPaper;
+  _name = _content->getName();
   return true;
 }
 
@@ -55,12 +59,8 @@ bool ConveyorBeltPePeNoel::OUT() {
   return true;
 }
 
-std::string const& ConveyorBeltPePeNoel::Look() const {
-  if (!_content) {
-    std::cerr << ICB_ERR_EMPTY << std::endl;
-    return NULL;
-  }
-  return _content->getName();
+std::string const ConveyorBeltPePeNoel::Look() const {
+  return _name;
 }
 
 IConveyorBelt *createConveyorBelt()

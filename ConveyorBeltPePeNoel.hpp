@@ -8,8 +8,9 @@
 # define ICB_ERR_EMPTY "Lazy little elf T_PAAMAYIM_NEKUDOTAYIM Conveyor Belt is empty !"
 
 class ConveyorBeltPePeNoel : public IConveyorBelt {
-private:
+protected:
   Object *_content;
+  std::string _name;
 
 public:
   ConveyorBeltPePeNoel();
@@ -19,7 +20,7 @@ public:
   bool Put(Object *);
   bool IN();
   bool OUT();
-  std::string const& Look() const;
+  void const Look() const;
 };
 
 IConveyorBelt *createConveyorBelt();

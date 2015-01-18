@@ -23,8 +23,11 @@ Object *MyUnitTests(Object **t)
     {
       if (!t[1]->isOpen())
         t[1]->openMe();
-      t[1]->wrapMeThat(t[0]);
-      t[2]->wrapMeThat(t[1]);
+      std::cout << t[1]->wrapMeThat(t[0]);
+      //std::cout << "La boite contient : " << t[1]->getContent()->getName() << std::endl;
+      std::cout << t[2]->wrapMeThat(t[1]);
+      //std::cout << "Le paper contient : " << t[2]->getContent()->getName() << std::endl;
+      std::cout << std::endl;
       return t[2];
     }
   return NULL;

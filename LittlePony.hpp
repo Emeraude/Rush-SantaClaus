@@ -1,8 +1,8 @@
 #ifndef LITTLEPONY_HPP
 # define LITTLEPONY_HPP
 
-# define PONY_NAME "Little Pony"
 # include <iostream>
+# include "Object.hpp"
 # include "Toy.hpp"
 
 class LittlePony : public Toy {

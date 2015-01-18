@@ -1,6 +1,6 @@
 #include "Toy.hpp"
 
-Toy::Toy(std::string const & name) : Object(name) {
+Toy::Toy(std::string const & name, std::string const & type) : Object(name, type) {
   
 }
 
