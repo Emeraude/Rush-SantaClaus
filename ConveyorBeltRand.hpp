@@ -8,6 +8,7 @@ public:
   ConveyorBeltRand();
   ~ConveyorBeltRand();
   bool IN();
+  std::string Serialize();
 };
 
 #endif

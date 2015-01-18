@@ -19,3 +19,9 @@ bool ConveyorBeltRand::IN() {
   _name = _content->getName();
   return true;
 }
+
+void ConveyorBeltRand::Serialize()
+{
+  if (_content)
+    std::cout << _content->XML();
+}

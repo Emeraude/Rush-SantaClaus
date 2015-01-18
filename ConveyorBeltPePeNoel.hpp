@@ -20,7 +20,7 @@ public:
   bool Put(Object *);
   bool IN();
   bool OUT();
-  std::string const Look() const;
+  void const Look() const;
 };
 
 IConveyorBelt *createConveyorBelt();
