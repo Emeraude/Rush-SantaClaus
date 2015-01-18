@@ -47,12 +47,14 @@ bool Object::wrapMeThat(Object * o) {
 }
 
 # define STRBOOL(x) (x ? "\"1\"" : "\"0\"")
+# define ATTRNAME() ("<name>" + getName() + "</name>")
+# define ATTROPEN() ("<isOpen>" + STRBOOL(isOpen()) + "</isOpen>")
 std::string Object::XML() const
 {
   if (_type == PAPER_NAME)
     return std::string("<" + _type + ">" + (getContent() ? getContent()->XML() : "") + "</" + _type + ">");
   if (_type == BOX_NAME)
-    return std::string("<" + _type + " _isOpen=" + STRBOOL(isOpen()) + ">" + (getContent() ? getContent()->XML() : "") + "</" + _type + ">");
+    return std::string("<" + _type + ">" + (getContent() ? getContent()->XML() : "") + "</" + _type + ">");
   return std::string("<" + _type + ">" + "</" + _type + ">");
 }
 
