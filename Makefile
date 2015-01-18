@@ -30,7 +30,7 @@ all:		$(NAME)
 
 $(NAME):	$(OBJ)
 		@$(CC) $(OBJ) -o $(NAME)
-		@cat asciiart
+		@echo -e "`cat asciiart`"
 
 clean:
 		@printf "[\033[0;31mdeleted\033[0m] % 30s\n" $(OBJ)
