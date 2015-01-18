@@ -13,7 +13,7 @@ public:
   Object *Take();
   Object *Take(int i);
   bool Put(Object*);
-  std::string Look() const;
+  std::string *Look() const;
 };
 
 ITable *createTable();

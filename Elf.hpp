@@ -36,8 +36,8 @@ protected:
 private:
   std::string _gender;
   std::string _name;
-  TablePePeNoel *_table;
-  ConveyorBeltPePeNoel *_cb;
+  ITable *_table;
+  IConveyorBelt *_cb;
   Object *_gift;
 
 };
