@@ -11,6 +11,8 @@ void Wrap::isTaken() {
 }
 
 bool Wrap::isOpen() const {
+  std::cout << "isOPEN DANS WRAP"<< std::endl;
+
   return _isOpen;
 }
 

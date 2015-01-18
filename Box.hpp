@@ -13,6 +13,8 @@ public:
 
   void closeMe();
   virtual bool wrapMeThat(Object*);
+
+  virtual bool isOpen();
 };
 
 #endif
