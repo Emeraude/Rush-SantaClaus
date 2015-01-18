@@ -22,12 +22,8 @@ void TablePePeNoel::generateStrings() {
   int i = -1;
   int j = -1;
   while (++i < 10)
-    if (_content[i]) {
+    if (_content[i])
       _strings[++j] = _content[i]->getName();
-      // std::cout << "#############" << _strings[j] << std::endl;
-    }
-  // for (int i = 0; i < 10; i++)
-  //   std::cout << "~~~~~~~~~~~~~~"<<_strings[i] << std::endl;
   _strings[++j] = "";
 }
 
