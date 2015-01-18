@@ -7,7 +7,7 @@
 
 class LittlePony : public Toy {
 public:
-  LittlePony(std::string const& name = );
+  LittlePony(std::string const& name = PONY_NAME);
   ~LittlePony();
 
   virtual void isTaken();
