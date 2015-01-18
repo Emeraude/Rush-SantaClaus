@@ -52,10 +52,10 @@ Object *TablePePeNoel::Take(int i) {
   return NULL;
 }
 
-bool TablePePeNoel::Put(Object *) {
+bool TablePePeNoel::Put(Object *o) {
   for (int i = 0; i < 9; ++i)
     if (!_content[i]) {
-      _content[i] = NULL;
+      _content[i] = o;
       this->generateStrings();
       return true;
     }

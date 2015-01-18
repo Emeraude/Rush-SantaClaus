@@ -11,6 +11,8 @@ Elf::Elf() :
 Elf::~Elf()
 {
   std::cout << _name << " est liiiiiiiiiibre !!!" << std::endl;
+  //delete _table;
+  //delete _cb;
 }
 
 bool Elf::CheckIfBoxAvailable() const
@@ -132,5 +134,6 @@ bool Elf::StartWork()
         }
     }
   std::cout << "pepe ya un schmolle dans le bignou" << std::endl;
+  std::cout << CheckIfGiftAvailable() << CheckIfToyAvailable() << TableHasPlace();
   return true;
 }
