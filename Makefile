@@ -1,10 +1,21 @@
-NAME		= 	my_cat
+NAME		=	SantaKoalaus
 
-SRC		=  	main.cpp
+SRC		=  	main.cpp \
+			Box.cpp \
+			ConveyorBeltPePeNoel.cpp \
+			Elf.cpp \
+			GiftPaper.cpp \
+			LittlePony.cpp \
+			MyUnitTests.cpp \
+			Object.cpp \
+			TablePePeNoel.cpp \
+			Teddy.cpp \
+			Toy.cpp \
+			Wrap.cpp
 
 OBJ		=	$(SRC:.cpp=.o)
 
-CFLAGS		+= 	-W -Wall -Werror
+CXXFLAGS	+= 	-W -Wall -Werror -Wextra
 
 RM		= 	rm -f
 
