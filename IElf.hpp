@@ -4,10 +4,10 @@
 # include "ConveyorBeltPePeNoel.hpp"
 # include "TablePePeNoel.hpp"
 
-class IEfl
+class IElf
 {
 protected:
-  virtual ~IEfl() {}
+  virtual ~IElf() {}
   virtual void startWork() = 0;
   virtual bool sendGift() = 0;
 };
