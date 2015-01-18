@@ -18,7 +18,7 @@ void Object::openMe() {
 }
 
 bool Object::isOpen() {
-  std::cerr << "in :"<< _name<<  " :Function member in isOpen does not exist" << std::endl;
+  std::cerr << "Function member in isOpen does not exist" << std::endl;
   return false;
 }
 
