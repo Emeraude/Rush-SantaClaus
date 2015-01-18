@@ -51,5 +51,6 @@ std::string[] TablePePeNoel::Look() const {
 
 ITable *createTable()
 {
-  ITable *table = new Table;
+  ITable *table = new TablePePeNoel;
+  return table;
 }
