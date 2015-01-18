@@ -8,33 +8,39 @@ Object** MyUnitTests();
 
 int		main(void)
 {
-  LittlePony	pony;
-  Teddy		teddy;
-
-  Box		box;
-  GiftPaper	giftPaper;
-
-  Object *toto = new Teddy;
-  // Object *titi = new LittlePony;
-
-  Object *tab[3];
-  box.isOpen();
+  std::cout << "----- TEST UNITAIRE 1 -----" << std::endl;
+  Object **objTab = MyUnitTests();
   
-  tab[0] = toto;
-  tab[1] = &box;
-  tab[2] = &giftPaper;
+  std::cout << objTab[0]->getName() << std::endl;
+  std::cout << objTab[1]->getName() << std::endl;
+
+  std::cout << std::endl <<std::endl;
+  std::cout << "----- TEST UNITAIRE 2 -----" << std::endl;
+
+  Object *Tibers = new Teddy("Tibers");
+  Object *BBox = new Box("Byougues Box");
+  Object *Paper = new GiftPaper("Kitty Paper");
+  Object *tab[3];
+  tab[0] = Tibers;
+  tab[1] = BBox;
+  tab[2] = Paper;
   Object *unit = MyUnitTests(tab);
-  Object **test = MyUnitTests();
-  std::cout << unit->getName() << std::endl;
-  std::cout << test[0]->getName() << std::endl;
-  std::cout << test[1]->getName() << std::endl;
 
-//  std::cout << unit->XML() << std::endl;
-//  std::cout << test[0]->XML() << std::endl;
-//  std::cout << test[1]->XML() << std::endl;
+  std::cout << std::endl;
+  std::cout << "Oh this a " << unit->getName() << " !" << std::endl;
+  std::cout << "OHHH a " << unit->getContent()->getName() << " So Fiber so Optical !" << std::endl;
+  std::cout << "AAAAAAAAAAAH !! How can this be ?! *" << unit->getContent()->getContent()->getName() << " GROWLS ! *" 
+  	    << std::endl;
+  std::cout << std::endl << std::endl;
 
-  //unit->setContent(tab[1]);
-  //unit->getContent()->setContent(tab[0]);
-  //std::cout << unit->XML() << std::endl;
+  std::cout << "-------- TEST XML --------" << std::endl;
+  
+  std::cout << Tibers->XML() << std::endl;
+  std::cout << BBox->XML() << std::endl << std::endl;
+  std::cout << unit->XML() << std::endl;
+
+  delete Tibers;
+  delete BBox;
+  delete Paper;
   return 0;
 }

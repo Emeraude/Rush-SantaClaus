@@ -6,8 +6,8 @@
 Object *MyUnitTests(Object **t)
 {
   std::string msg[3] = {
-    "No Toy provided ! You made a children sad :(",
-    "No Box provided :'( Your Toy is now broken. Dirty soul ...",
+    "Wrong Toy provided ! You made a children sad :(",
+    "Wrong Box provided :'( Your Toy is now broken. Dirty soul ...",
     "No GiftPaper provided ! This is an ugly box ..."
   };
 
@@ -23,11 +23,8 @@ Object *MyUnitTests(Object **t)
     {
       if (!t[1]->isOpen())
         t[1]->openMe();
-      std::cout << t[1]->wrapMeThat(t[0]);
-      //std::cout << "La boite contient : " << t[1]->getContent()->getName() << std::endl;
-      std::cout << t[2]->wrapMeThat(t[1]);
-      //std::cout << "Le paper contient : " << t[2]->getContent()->getName() << std::endl;
-      std::cout << std::endl;
+      t[1]->wrapMeThat(t[0]);
+      t[2]->wrapMeThat(t[1]);
       return t[2];
     }
   return NULL;
