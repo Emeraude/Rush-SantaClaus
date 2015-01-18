@@ -13,13 +13,13 @@
 class Elf : public IElf
 {
 public:
-  Elf();
+  Elf(std::string const& name = "Dobby");
   ~Elf();
 
   bool StartWork();
+  std::string const& getName() const;
 
-protected:
-  //bool SendGift();
+private:
   bool CheckIfBoxAvailable() const;
   bool CheckIfPaperAvailable() const;
   bool CheckIfToyAvailable() const;
@@ -33,8 +33,8 @@ protected:
   bool TakeAWrap();
 
 private:
-  std::string _gender;
-  std::string _name;
+  std::string const _gender;
+  std::string const _name;
   ITable *_table;
   IConveyorBelt *_cb;
   Object *_gift;
