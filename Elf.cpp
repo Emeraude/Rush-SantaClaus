@@ -13,7 +13,7 @@ Elf::~Elf()
   std::cout << _name << " est liiiiiiiiiibre !!!" << std::endl;
 }
 
-bool Elf::CheckIfBoxAvailable()
+bool Elf::CheckIfBoxAvailable() const
 {
   if (_cb->Look() == BOX_NAME)
     return true;
@@ -24,7 +24,7 @@ bool Elf::CheckIfBoxAvailable()
   return false;
 }
 
-bool Elf::CheckIfPaperAvailable()
+bool Elf::CheckIfPaperAvailable() const
 {
   if (_cb->Look() == PAPER_NAME)
     return true;
@@ -35,7 +35,7 @@ bool Elf::CheckIfPaperAvailable()
   return false;
 }
 
-bool Elf::CheckIfToyAvailable()
+bool Elf::CheckIfToyAvailable() const
 {
   std::string *s = _table->Look(); // list of objects
   for (int i=0; !s[i].empty(); i++)
@@ -44,12 +44,12 @@ bool Elf::CheckIfToyAvailable()
   return false;
 }
 
-bool Elf::CheckIfGiftAvailable()
+bool Elf::CheckIfGiftAvailable() const
 {
   return CheckIfBoxAvailable() && CheckIfPaperAvailable() && CheckIfToyAvailable();
 }
 
-bool Elf::TableHasPlace()
+bool Elf::TableHasPlace() const
 {
   int i;
   std::string *s = _table->Look();
@@ -57,7 +57,7 @@ bool Elf::TableHasPlace()
   return i != 10;
 }
 
-void Elf::EnumTable()
+void Elf::EnumTable() const
 {
   std::string *s = _table->Look();
   std::cout << _name << " go to check the table..." << std::endl;
