@@ -6,6 +6,7 @@
 class ITable
 {
   virtual Object *Take() = 0;
+  virtual Object *Take(int i) = 0;
   virtual bool Put(Object *) = 0;
   virtual std::string Look() const = 0;
 };

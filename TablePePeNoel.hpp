@@ -11,6 +11,7 @@ public:
   TablePePeNoel();
   ~TablePePeNoel();
   Object *Take();
+  Object *Take(int i);
   bool Put(Object*);
   std::string Look() const;
 };
