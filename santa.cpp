@@ -6,20 +6,37 @@
 bool checkErrorOnContent(std::string content, int level)
 {
   //If error, return and fail
-  if (level == 0 && content != PAPER_NAME)
+  if (level == 0)
     {
-      std::cout << "Error : Expected '" << PAPER_NAME << "', was '" << content << "'" << std::endl;
-      return false;
+      if (content == PAPER_NAME)
+        std::cout << "whistles while working" << std::endl;
+      else
+        {
+          std::cout << "Error : Expected '" << PAPER_NAME << "', was '" << content << "'" << std::endl;
+          return false;
+        }
     }
-  else if (level == 1 && content != BOX_NAME)
+  else if (level == 1)
     {
-      std::cout << "Error : Expected '" << PAPER_NAME << "', was '" << content << "'" << std::endl;
-      return false;
+      if (content == BOX_NAME)
+        std::cout << "whistles while working" << std::endl;
+      else
+        {
+          std::cout << "Error : Expected '" << PAPER_NAME << "', was '" << content << "'" << std::endl;
+          return false;
+        }
     }
-  else if (level == 2 && content != PONY_NAME && content != TEDDY_NAME)
+  else if (level == 2)
     {
-      std::cout << "Error : Expected a TOY, was '" << content << "'" << std::endl;
-      return false;
+      if (content == PONY_NAME)
+        std::cout << "yo man" << std::endl;
+      else if (content == TEDDY_NAME)
+        std::cout << "gra hu" << std::endl;
+      else
+        {
+          std::cout << "Error : Expected a TOY, was '" << content << "'" << std::endl;
+          return false;
+        }
     }
   else if (level > 2 && content != "")
     {
