@@ -115,7 +115,7 @@ bool Elf::TakeAWarp()
 bool Elf::StartWork()
 {
   // if a gift is dispo or if a toy AND place for a warp
-  while (CheckIfGiftAvailable() || (CheckIfToysAvailable() && TableHasPlace()))
+  while (CheckIfGiftAvailable() || (CheckIfToyAvailable() && TableHasPlace()))
     {
       EnumTable();
       if (CheckIfGiftAvailable())
