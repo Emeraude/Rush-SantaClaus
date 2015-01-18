@@ -1,5 +1,9 @@
 #include <iostream>
 #include "TablePePeNoel.hpp"
+#include "Teddy.hpp"
+#include "LittlePony.hpp"
+#include "Box.hpp"
+#include "GiftPaper.hpp"
 
 TablePePeNoel::TablePePeNoel() {
   for (int i = 0; i < 9; ++i)
@@ -66,6 +70,11 @@ std::string* TablePePeNoel::Look() const {
 ITable *createTable()
 {
   ITable *table = new TablePePeNoel;
-  // TODO : Init with 2 2 2
+  table->Put(new Teddy);
+  table->Put(new LittlePony);
+  table->Put(new Box);
+  table->Put(new Box);
+  table->Put(new GiftPaper);
+  table->Put(new GiftPaper);
   return table;
 }
