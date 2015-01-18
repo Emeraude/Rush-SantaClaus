@@ -23,6 +23,7 @@ public:
   virtual bool wrapMeThat(Object *);
 };
 
+std::ostream& operator<<(std::ostream &, Object const &);
 Object *MyUnitTests(Object **);
 
 #endif

@@ -5,16 +5,17 @@
 
 class TablePePeNoel : public ITable {
 private:
-  Object* _content[10];
-  std::string _strings[11];
+  Object* _content[9];
+  std::string *_strings;
 
+  void generateStrings();
 public:
   TablePePeNoel();
   ~TablePePeNoel();
   Object *Take();
   Object *Take(int i);
   bool Put(Object*);
-  std::string *Look();
+  std::string* Look() const;
 };
 
 ITable *createTable();

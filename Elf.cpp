@@ -13,8 +13,10 @@ Elf::~Elf()
   std::cout << _name << " est liiiiiiiiiibre !!!" << std::endl;
 }
 
-bool Elf::CheckIfBoxOnTable()
+bool Elf::CheckIfBoxAvailable() const
 {
+  if (_cb->Look() == BOX_NAME)
+    return true;
   std::string *s = _table->Look(); // list of objects
   for (int i=0; !s[i].empty(); i++)
     if (s[i] == BOX_NAME)
@@ -22,8 +24,10 @@ bool Elf::CheckIfBoxOnTable()
   return false;
 }
 
-bool Elf::CheckIfPaperOnTable()
+bool Elf::CheckIfPaperAvailable() const
 {
+  if (_cb->Look() == PAPER_NAME)
+    return true;
   std::string *s = _table->Look(); // list of objects
   for (int i=0; !s[i].empty(); i++)
     if (s[i] == PAPER_NAME)
@@ -31,7 +35,7 @@ bool Elf::CheckIfPaperOnTable()
   return false;
 }
 
-bool Elf::CheckIfToyOnTable()
+bool Elf::CheckIfToyAvailable() const
 {
   std::string *s = _table->Look(); // list of objects
   for (int i=0; !s[i].empty(); i++)
@@ -40,12 +44,12 @@ bool Elf::CheckIfToyOnTable()
   return false;
 }
 
-bool Elf::CheckIfGiftOnTable()
+bool Elf::CheckIfGiftAvailable() const
 {
-  return CheckIfBoxOnTable() && CheckIfPaperOnTable() && CheckIfToyOnTable();
+  return CheckIfBoxAvailable() && CheckIfPaperAvailable() && CheckIfToyAvailable();
 }
 
-bool Elf::TableHasPlace()
+bool Elf::TableHasPlace() const
 {
   int i;
   std::string *s = _table->Look();
@@ -53,7 +57,7 @@ bool Elf::TableHasPlace()
   return i != 10;
 }
 
-void Elf::EnumTable()
+void Elf::EnumTable() const
 {
   std::string *s = _table->Look();
   std::cout << _name << " go to check the table..." << std::endl;
@@ -76,7 +80,7 @@ Object *Elf::TakeFirstBox()
   for (int i; !s[i].empty(); i++)
     if (s[i] == BOX_NAME)
       return _table->Take(i);
-  return NULL;
+  return _cb->Take();
 }
 
 Object *Elf::TakeFirstPaper()
@@ -85,7 +89,7 @@ Object *Elf::TakeFirstPaper()
   for (int i; !s[i].empty(); i++)
     if (s[i] == PAPER_NAME)
       return _table->Take(i);
-  return NULL;
+  return _cb->Take();
 }
 
 void Elf::MakeAGift()
@@ -111,10 +115,10 @@ bool Elf::TakeAWarp()
 bool Elf::StartWork()
 {
   // if a gift is dispo or if a toy AND place for a warp
-  while (CheckIfGiftOnTable() || (CheckIfToysOnTable() && TableHasPlace()))
+  while (CheckIfGiftAvailable() || (CheckIfToyAvailable() && TableHasPlace()))
     {
       EnumTable();
-      if (CheckIfGiftOnTable())
+      if (CheckIfGiftAvailable())
         {
           MakeAGift(); // set the _gift
           _cb->Put(_gift);

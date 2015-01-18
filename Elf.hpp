@@ -16,16 +16,16 @@ public:
   Elf();
   ~Elf();
 
-  void StartWork();
+  bool StartWork();
 
 protected:
   bool SendGift();
-  bool CheckIfBoxOnTable();
-  bool CheckIfPaperOnTable();
-  bool CheckIfToyOnTable();
-  bool CheckIfGiftOnTable();
-  bool TableHasPlace();
-  void EnumTable();
+  bool CheckIfBoxAvailable() const;
+  bool CheckIfPaperAvailable() const;
+  bool CheckIfToyAvailable() const;
+  bool CheckIfGiftAvailable() const;
+  bool TableHasPlace() const;
+  void EnumTable() const;
   Object *TakeFirstToy();
   Object *TakeFirstBox();
   Object *TakeFirstPaper();
