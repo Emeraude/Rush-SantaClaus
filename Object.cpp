@@ -17,6 +17,10 @@ void Object::openMe() {
   std::cerr << "Function member in openMe does not exist" << std::endl;
 }
 
+void Object::closeMe() {
+  std::cerr << "Function member in closeMe does not exist" << std::endl;
+}
+
 bool Object::isOpen() {
   std::cerr << "Function member in isOpen does not exist" << std::endl;
   return false;

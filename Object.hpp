@@ -21,6 +21,7 @@ public:
   virtual void openMe();
   virtual bool isOpen();
   virtual bool wrapMeThat(Object *);
+  virtual void closeMe();
 };
 
 std::ostream& operator<<(std::ostream &, Object const &);
