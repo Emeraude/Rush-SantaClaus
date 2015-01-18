@@ -20,8 +20,15 @@ Object *TablePePeNoel::Take() {
   return NULL;
 }
 
+Object *TablePePeNoel::Take(int i) {
+  if (_content[i])
+    return _content[i];
+  std::cerr << "This Object does not exists !" << std::endl;
+  return NULL;
+}
+
 bool TablePePeNoel::Put(Object *) {
-  for (int i = 0; i < 10; ++i)
+  for (int i = 0; i < 9; ++i)
     if (!_content[i]) {
       _content[i] = NULL;
       return true;
