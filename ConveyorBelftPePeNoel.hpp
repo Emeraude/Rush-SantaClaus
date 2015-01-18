@@ -4,6 +4,9 @@
 # include "Object.hpp"
 # include "IConveyorBelt.hpp"
 
+# define ICB_ERR_NEMPTY "Conveyor Belt queue overflow ! It's not empty !"
+# define ICB_ERR_EMPTY "Lazy little elf T_PAAMAYIM_NEKUDOTAYIM Conveyor Belt is empty !"
+
 class ConveyorBeltPePeNoel : public IConveyorBelt {
 private:
   Object *_content;
@@ -18,5 +21,7 @@ public:
   bool OUT();
   std::string const& Look() const;
 };
+
+IConveyorBelt *createConveyorBelt();
 
 #endif
