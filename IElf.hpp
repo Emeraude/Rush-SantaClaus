@@ -1,6 +1,7 @@
 #ifndef IELF_HPP
 # define IELF_HPP
 
+# include <string>
 # include "ConveyorBeltPePeNoel.hpp"
 # include "TablePePeNoel.hpp"
 
@@ -8,8 +9,6 @@ class IElf
 {
 protected:
   virtual ~IElf() {}
-  virtual bool StartWork() = 0;
-  //virtual bool SendGift() = 0;
   virtual bool CheckIfBoxAvailable() const = 0;
   virtual bool CheckIfPaperAvailable() const = 0;
   virtual bool CheckIfToyAvailable() const = 0;
@@ -21,6 +20,9 @@ protected:
   virtual Object *TakeFirstPaper() = 0;
   virtual void MakeAGift() = 0;
   virtual bool TakeAWrap() = 0;
+public:
+  virtual bool StartWork() = 0;
+  virtual std::string const& getName() const = 0;
 };
 
 #endif

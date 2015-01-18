@@ -34,6 +34,12 @@ int		main(void)
   	    << std::endl;
   std::cout << std::endl << std::endl;
 
+  std::cout << "-------- TEST UNITAIRE - ELF --------" << std::endl;
+
+  IElf *elf = new Elf;
+  std::cout << elf->getName() << std::endl;
+  elf->StartWork();
+
   std::cout << "-------- TEST XML --------" << std::endl;
   
   std::cout << Tibers->XML() << std::endl;
@@ -41,8 +47,6 @@ int		main(void)
   std::cout << unit->XML() << std::endl;
 
   std::cout << "-------- TEST ELF --------" << std::endl;
-  Elf elf;
-  elf.StartWork();
 
   delete Tibers;
   delete BBox;

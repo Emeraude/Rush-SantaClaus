@@ -1,8 +1,7 @@
 #include "Elf.hpp"
 
-Elf::Elf() :
-    _gender("None"),
-    _name("Dobby")
+Elf::Elf(std::string const& name) :
+    _name(name)
 {
   _table = createTable();
   _cb = createConveyorBelt();
@@ -136,4 +135,8 @@ bool Elf::StartWork()
   std::cout << "pepe ya un schmolle dans le bignou" << std::endl;
   std::cout << CheckIfGiftAvailable() << CheckIfToyAvailable() << TableHasPlace();
   return true;
+}
+
+std::string const& Elf::getName() const {
+  return _name;
 }
